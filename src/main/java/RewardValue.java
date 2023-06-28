@@ -1,5 +1,7 @@
 public class RewardValue {
     private Double cash;
+
+    private static final double conversionRate = 0.0035;
     private Integer miles;
 
     // The two constructors are initialized with the same name and are subject to method overloading
@@ -21,5 +23,5 @@ public class RewardValue {
 
     // Applies the conversion rate and returns the appropriate mile rewards
     // based on the amount of cash
-    public Double getMilesValue() { return cash * 0.0035; }
+    public Double getMilesValue() { return cash / conversionRate; }
 }
