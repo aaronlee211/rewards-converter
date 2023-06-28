@@ -9,11 +9,17 @@ public class RewardValue {
         this.cash = cashValue;
     }
 
+    // instructed to make a constructor to accept miles, but in the RewardsConverter, there is no
+    // line to create a new constructor passing in miles, so it is unused
     public RewardValue(Integer miles) {
         this.miles = miles;
     }
 
+    // Grabs the cash value that is assigned to the class RewardValue
+    // When initialized with new RewardValue(cashValue)
     public Double getCashValue() { return cash; }
 
+    // Applies the conversion rate and returns the appropriate mile rewards
+    // based on the amount of cash
     public Double getMilesValue() { return cash * 0.0035; }
 }
