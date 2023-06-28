@@ -22,7 +22,7 @@ public class RewardValue {
 
     // Applies the conversion rate and returns the appropriate mile rewards
     // based on the amount of cash
-    public double getMilesValue() { return cash / conversionRate; }
+    public double getMilesValue() { return (cash / conversionRate); }
 
     public int convertToMoney(int milesValue) {
         return (int) (milesValue * conversionRate);
